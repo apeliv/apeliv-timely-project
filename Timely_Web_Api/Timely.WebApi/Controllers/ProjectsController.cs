@@ -14,8 +14,8 @@ namespace Timely.WebApi.Controllers
         {
             _context = context;
         }
-        
-        [HttpGet]
+
+        [HttpGet]     
         public async Task<IActionResult> GetProjects() 
         {
             return Ok(await _context.Projects.ToListAsync());

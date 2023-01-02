@@ -4,7 +4,7 @@ namespace Timely.WebApi.Models;
 
 public partial class TimelyContext : DbContext
 {
-    private readonly string connect_string= "TimelyContext";
+    private readonly string connect_string= "Data Source=DESKTOP-DL12C5C;Initial Catalog=timely;Integrated Security=True;Encrypt=False";
     public TimelyContext()
     {
     }
