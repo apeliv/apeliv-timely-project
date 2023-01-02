@@ -1,0 +1,24 @@
+<header>
+  <h1 class="title">Timely</h1>
+</header>
+<main>
+  <button
+    class="btn start-btn"
+    (click)="toggleStartButton()"
+    *ngIf="!onStartActiveSection"
+  >
+    Start
+  </button>
+  <button
+    class="btn stop-btn"
+    (click)="toggleStopButton()"
+    *ngIf="onStartActiveSection"
+  >
+    Stop
+  </button>
+</main>
+<app-project-on-start
+  *ngIf="onStartActiveSection && !onStopActiveSection"
+></app-project-on-start>
+<app-project-on-stop *ngIf="onStopActiveSection"></app-project-on-stop>
+<router-outlet></router-outlet>
